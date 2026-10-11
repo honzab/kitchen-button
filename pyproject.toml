@@ -1,0 +1,19 @@
+[project]
+name = "playlist-button"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Jan Brucek", email = "jan@brucek.se" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "spotipy>=2.26"
+]
+
+[project.scripts]
+playlist-button = "playlist_button:main"
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"

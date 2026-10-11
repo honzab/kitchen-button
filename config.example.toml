@@ -1,0 +1,27 @@
+# Copy to config.toml and fill in your own values.
+# config.toml is gitignored - never commit it.
+
+[spotify]
+# Create an app at https://developer.spotify.com/dashboard
+client_id = "your-client-id"
+client_secret = "your-client-secret"
+# Must match the redirect URI registered on the Spotify app.
+redirect_uri = "http://127.0.0.1:8888/callback"
+# Where the OAuth refresh token is cached. "~" is expanded.
+cache_path = "~/.spotify_token"
+
+[playback]
+# Device name exactly as shown in the Spotify app.
+device_name = "Your Spotify Connect device"
+playlist_uri = "spotify:playlist:0000000000000000000000"
+# Volume to set when playback starts, 0-100. Omit to leave the device alone.
+volume = 25
+shuffle = true
+
+[button]
+# BCM pin number. GPIO17 is physical pin 11.
+gpio_pin = 17
+# true: closed contacts = play, open = pause.
+# false: momentary button toggles play/pause.
+toggle_switch = false
+bounce_time = 0.05
